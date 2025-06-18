@@ -1,0 +1,25 @@
+class Main {
+    public static void main(String[] args) {
+        int n = 5;
+        
+        int number = 1;
+        int counter_odd = n * 2 - 1;
+        int counter_even = 1;
+        for(int i = 0; i < n; i++) {
+            int temp = number;
+            for(int j = 0; j < n; j++) {
+                System.out.print(temp + "\t");
+                if(j % 2 == 0) {
+                    temp = temp + counter_odd;
+                } else {
+                    temp = temp + counter_even;
+                }
+            }
+            
+            counter_odd -= 2;
+            counter_even += 2;
+            number++;
+            System.out.println();
+        }
+    }
+}
