@@ -1,0 +1,23 @@
+class Main {
+    public static void main(String[] args) {
+        int n = 7;
+        
+        // 1  
+        // 2  6  
+        // 3  7  9  
+        // 4  8  
+        // 5  
+        
+        display(n);
+    }
+    static void display(int n) {
+        for(int i = 0; i < n; i++) {
+            int num = i + 1;
+            for(int j = 0; j <= i && i+j <= n - 1; j++) {
+                System.out.print(num + "  ");
+                num += n - (j * 2 + 1);
+            }
+            System.out.println();
+        }
+    }
+}
