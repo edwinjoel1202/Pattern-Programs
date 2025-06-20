@@ -1,0 +1,27 @@
+class Main {
+    public static void main(String[] args) {
+        int n = 5;
+
+        // 1	1  1	1	 1	
+        // 1	2	 2	2	 1	
+        // 1	2	 3	2	 1	
+        // 1	2	 2	2	 1	
+        // 1	1	 1	1	 1	
+        
+        display(n);
+    }
+    static void display(int n) {
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < n; j++) {
+                int top = i;
+                int bottom = n - i - 1;
+                int left = j;
+                int right = n - j - 1;
+                
+                int num = Math.min(Math.min(top, bottom), Math.min(left, right));
+                System.out.print(num+1 + "\t");
+            }
+            System.out.println();
+        }
+    }
+}
